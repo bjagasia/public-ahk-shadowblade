@@ -1,6 +1,4 @@
-﻿; Created by Asger Juul Brunshøj
-
-; Note: Save with encoding UTF-8 with BOM if possible.
+﻿; Note: Save with encoding UTF-8 with BOM if possible.
 ; I had issues with special characters like in ¯\_(ツ)_/¯ that wouldn't work otherwise.
 ; Notepad will save UTF-8 files with BOM automatically (even though it does not say so).
 ; Some editors however save without BOM, and then special characters look messed up in the AHK GUI.
