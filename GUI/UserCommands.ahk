@@ -179,12 +179,6 @@ else if Pedersen = aorders ; Amazon Orders
 }
 
 
-else if Pedersen = jstand ; BSIO Jira Stand up
-{
-    gui_destroy()
-    run https://bladestack.atlassian.net/jira/software/c/projects/BKAIZEN/boards/14
-}
-
 else if Pedersen = jticket ; BSIO Jira - Create JIRA Ticket
 {
     gui_destroy()
