@@ -1,4 +1,4 @@
-﻿; Note: Save with encoding UTF-8 with BOM if possible.
+; Note: Save with encoding UTF-8 with BOM if possible.
 ; I had issues with special characters like in ¯\_(ツ)_/¯ that wouldn't work otherwise.
 ; Notepad will save UTF-8 files with BOM automatically (even though it does not say so).
 ; Some editors however save without BOM, and then special characters look messed up in the AHK GUI.
@@ -56,6 +56,44 @@ else if Pedersen = y%A_Space% ; Search Youtube
     gui_search_title = Search Youtube
     gui_search("https://www.youtube.com/results?search_query=REPLACEME")
 }
+
+else if Pedersen = the%A_Space% ; Thesaurus
+{
+    gui_search_title = Thesaurus
+    gui_search("https://www.thesaurus.com/browse/REPLACEME")
+}
+
+else if Pedersen = ncontrol%A_Space% ; NIST 800-53 R5 Control Search
+{
+    gui_search_title = NIST 800-53 R5 Control Search
+    gui_search("https://csrc.nist.gov/projects/cprt/catalog#/cprt/framework/version/SP_800_53_5_1_0/home?element=REPLACEME")
+}
+
+else if Pedersen = nkey%A_Space% ; NIST 800-53 R5 Control Keyword Search
+{
+    gui_search_title = NIST 800-53 R5 Control Keyword Search
+    gui_search("https://csrc.nist.gov/projects/cprt/catalog#/cprt/framework/version/SP_800_53_5_1_0/home?keyword=REPLACEME")
+}
+
+else if Pedersen = nistdef%A_Space% ; NIST Definition
+{
+    gui_search_title = NIST Definition
+    gui_search("https://csrc.nist.gov/glossary?keywords-lg=REPLACEME")
+}
+
+else if Pedersen = cmvp%A_Space% ; CMVP Search
+{
+    gui_search_title = Search CMVP
+    gui_search("https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search?SearchMode=Basic&Vendor=REPLACEME&CertificateStatus=Active&ValidationYear=0")
+}
+
+
+else if Pedersen = frmarket%A_Space% ; Search FR Marketplace
+{
+    gui_search_title = Search FedRAMP Marketplace
+    gui_search("https://marketplace.fedramp.gov/#!/products?sort=productName&productNameSearch=REPLACEME")
+}
+
 else if Pedersen = t%A_Space% ; Search torrent networks
 {
     gui_search_title = Sharing is caring
@@ -87,7 +125,110 @@ else if Pedersen = face ; facebook.com
     run www.facebook.com
 }
 
-else if Pedersen = ghubb ; BSIO GitHub
+
+else if Pedersen = miro ; miro.com
+{
+    gui_destroy()
+    run https://miro.com/app/dashboard/
+}
+
+
+else if Pedersen = vb ; vegetable and butcher
+{
+    gui_destroy()
+    run https://vegetableandbutcher.com/account
+}
+
+
+else if Pedersen = chase ; chase.com
+{
+    gui_destroy()
+    run https://secure07a.chase.com/web/auth/dashboard#/dashboard/overviewAccounts/overview/index
+}
+
+else if Pedersen = bjira.a ; BSIO Jira
+{
+    gui_destroy()
+    run https://bladestack.atlassian.net/jira/projects
+}
+
+else if Pedersen = bjira.f ; BSIO Jira - Filtered
+{
+    gui_destroy()
+    run https://bladestack.atlassian.net/jira/software/c/projects/BKAIZEN/boards/14?assignee=62c593724d60fcc2579659ec
+}
+
+else if Pedersen = bjira.stand ; BSIO Jira - Standup
+{
+    gui_destroy()
+    run https://bladestack.atlassian.net/jira/software/c/projects/BKAIZEN/boards/14
+}
+
+
+else if Pedersen = bjs%A_Space% ; BSIO Jira - Search
+{
+    gui_search_title = Search BSIO Jira
+    gui_search("https://bladestack.atlassian.net/issues/?jql=text%20~%20%22REPLACEME%22")
+}
+
+else if Pedersen = bjira.s ; BSIO Jira - Find/Search
+{
+    gui_destroy()
+    run https://bladestack.atlassian.net/jira/software/c/projects/BKAIZEN/boards/14
+}
+
+
+else if Pedersen = aorders ; Amazon Orders
+{
+    gui_destroy()
+    run https://www.amazon.com/gp/css/order-history?ref_=nav_orders_first
+}
+
+
+else if Pedersen = jstand ; BSIO Jira Stand up
+{
+    gui_destroy()
+    run https://bladestack.atlassian.net/jira/software/c/projects/BKAIZEN/boards/14
+}
+
+else if Pedersen = jticket ; BSIO Jira - Create JIRA Ticket
+{
+    gui_destroy()
+    run https://bladestack.atlassian.net/jira/projects
+}
+
+
+else if Pedersen = awsscope ; AWS Services in Scope - FedRAMP
+{
+    gui_destroy()
+    run https://aws.amazon.com/compliance/services-in-scope/FedRAMP/
+}
+
+else if Pedersen = dash-ant ; Anthology Dashboard
+{
+    gui_destroy()
+    run https://app.smartsheet.com/dashboards/g824frhC4pC3JvhQ8JcJ2mRCv39JXqF82jCr58M1
+}
+
+else if Pedersen = erl-ants ; Anthology ERL Dashboard Sheet
+{
+    gui_destroy()
+    run https://app.smartsheet.com/sheets/v2fxGrJgfhQFpJW2gRFC88P9mXGWVC7h3JXqMQR1?view=grid
+}
+
+else if Pedersen = erl-antd ; Anthology ERL Dashboard
+{
+    gui_destroy()
+    run https://app.smartsheet.com/dashboards/hjf6c25h6hC7hP629Cv3cfvchJHm2f4v5hMJ4Q41
+}
+
+else if Pedersen = dash-weka ; Weka.io Dashboard
+{
+    gui_destroy()
+    run https://app.smartsheet.com/dashboards/Q3rmcQ53RrG8VHvFWWmGgf9wHwWppVvRqX9gMR21
+}
+
+else if Pedersen = bsio-git ; BSIO GitHub
 {
     gui_destroy()
     run https://github.com/bladestack-io
@@ -125,16 +266,28 @@ else if Pedersen = paint ; MS Paint
     run "C:\Windows\system32\mspaint.exe"
 }
 
+else if Pedersen = caffe ; Caffeine
+{
+    gui_destroy()
+    run "C:\Users\Admin\OneDrive - bladestack.io\# BACKUPS\# PERSONAL BACKUP\Downloads Backup 2021-10-05\Archive\caffeine\caffeine64.exe"
+}
+
 else if Pedersen = lin ; Linkedin.com
 {
     gui_destroy()
     run www.linkedin.com
 }
 
-else if Pedersen = blin ; BSIO LinkedIn
+else if Pedersen = bsio-link ; BSIO LinkedIn
 {
     gui_destroy()
     run https://www.linkedin.com/company/75065597/admin/notifications/all/
+}
+
+else if Pedersen = market ; FedRAMP Marketplace
+{
+    gui_destroy()
+    run https://marketplace.fedramp.gov/#!/products?sort=productName
 }
 
 else if Pedersen = maps ; Google Maps focused on the Technical University of Denmark, DTU
@@ -159,7 +312,7 @@ else if Pedersen = url ; Open an URL from the clipboard (naive - will try to run
     run %ClipBoard%
 }
 
-else if Pedersen = term
+else if Pedersen = term ; Open WSL Terminal
 {
     gui_destroy()
     run "C:\Users\Admin\AppData\Local\Microsoft\WindowsApps\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\wt.exe"
@@ -195,7 +348,7 @@ else if Pedersen = slack ; Open slack
     return
 }
 
-else if Pedersen = bslack ; Open BSIO Slack
+else if Pedersen = bsio-slack ; Open BSIO Slack
 {
     gui_destroy()
     DetectHiddenWindows, Off
@@ -358,8 +511,15 @@ else if Pedersen = killsnag ; kill snagit
 else if Pedersen = snag ; open snagit
 {
     gui_destroy()
-    Run "C:\Program Files\TechSmith\Snagit 2022\SnagitCapture.exe"
+    Run "C:\Program Files\TechSmith\Snagit 2023\SnagitCapture.exe"
 }
+
+else if Pedersen = temp ; open snagit
+{
+    gui_destroy()
+    Run "C:\Program Files\HWiNFO64\HWiNFO64.EXE"
+}
+
 
 
 
@@ -495,6 +655,12 @@ else if Pedersen = start ; Startup folder
 ;-------------------------------------------------------------------------------
 ;;; MISCELLANEOUS ;;;
 ;-------------------------------------------------------------------------------
+else if Pedersen = sound ; Restart SoundBlaster Audio Service
+{
+    gui_destroy()
+    Run, cmd /c sc stop CTAudSvcService & sc start CTAudSvcService
+}
+
 else if Pedersen = ping ; Ping Google
 {
     gui_destroy()
@@ -546,21 +712,44 @@ else if Pedersen = anom-action ; Anomali Advisory Action Items Dashboard
     run "https://app.smartsheet.com/dashboards/JwwVH7ghw9MQGJPPvPgQV9364RmVwpr7qxJ4Mmq1"
 }
 
-else if Pedersen = oda-smart ; Odaseva Advisory Smartsheet
+else if Pedersen = dash-oda ; Odaseva Advisory Smartsheet
 
 {
     gui_destroy()
-    run "https://app.smartsheet.com/workspaces/Wg5M96qQJFgJwg82Pq4RVx296vJ5M4C327f8FGQ1"
+    run "https://app.smartsheet.com/dashboards/23QWmxj2v2Gm5w2jMXV9QjF8pwVJgHvvFP5Mcwc1"
 }
 
-else if Pedersen = oda-dash ; Odaseva Advisory Dashboard
+else if Pedersen = gap-oda ; Odaseva Gap Dash
 
 {
     gui_destroy()
-    run "https://app.smartsheet.com/dashboards/R6G6FG2Rm43c4WJg9MpgJ3r9q7gG9fWGPMf6wM21"
+    run "https://app.smartsheet.com/dashboards/23QWmxj2v2Gm5w2jMXV9QjF8pwVJgHvvFP5Mcwc1"
 }
 
 
+else if Pedersen = gap-weka ; Weka Gap Dash
+
+{
+    gui_destroy()
+    run "https://app.smartsheet.com/dashboards/Q3rmcQ53RrG8VHvFWWmGgf9wHwWppVvRqX9gMR21"
+}
+
+
+
+else if Pedersen = pip-conmon ; Perceptyx ConMon Dashboard
+
+{
+    gui_destroy()
+    run "https://app.smartsheet.com/dashboards/g3xMjVrqjvjg2mxv52Qf8Q8wH2VMmM3VhVpJqx51"
+}
+
+
+else if Pedersen = pip-hours ; Perceptyx ConMon Dashboard
+
+{
+    gui_destroy()
+    run "https://app.smartsheet.com/b/form/0b897cde02b549ab8f36fd3353fbf501"
+}
 
 ;-------------------------------------------------------------------------------
 ;;; BSIO - NOTION ;;;
@@ -608,6 +797,34 @@ else if Pedersen = nts ; Notion - Samuraitasuku Tablew view by Samurai
     run "https://www.notion.so/bladestack/Board-By-Samurai-b91d92546b73450da04d44c4dc9fd413"
 }
 
+
+
+else if Pedersen = nadv ; Notion - Advisory
+
+
+{
+    gui_destroy()
+    run "https://www.notion.so/bladestack/49f7906990ae4808a7302becd3d5ba98?v=bfe63a0e8ed64548866f71c12e6e36c8"
+}
+
+else if Pedersen = nsam ; Notion - Samurai Mananagement Meeting Minutes
+
+
+{
+    gui_destroy()
+    run "https://www.notion.so/bladestack/66b3c7786e83417b9445e7098e66cdc0?v=d5a48e70451c48069bcd780791e8346f"
+}
+
+
+else if Pedersen = tstack ; Notion - Samurai Mananagement Meeting Minutes
+
+
+{
+    gui_destroy()
+    run "https://www.notion.so/bladestack/Tools-Stack-201646485c97404e84fb4b1a838f0139"
+}
+
+
 ;-------------------------------------------------------------------------------
 ;;; BSIO - BOX - EXPLORER;;;
 ;-------------------------------------------------------------------------------
@@ -646,6 +863,12 @@ else if Pedersen = box-root ; Root Box
     run "https://bladestackio.app.box.com/folder/0"
 }
 
+else if Pedersen = box-blackboard ; Blackboard Box
+{
+    gui_destroy()
+    run "https://bladestackio.app.box.com/folder/176157435309"
+}
+
 
 
 ;-------------------------------------------------------------------------------
@@ -658,6 +881,7 @@ else if Pedersen = cal ; open outlook calendar
     DetectHiddenWindows, On
     WinActivate, Calendar - bjagasia@bladestack.io - Outlook
     WinActivate, lollybaggins@gmail.com - Internet Calendars - Outlook
+    WinActivate, lollybaggins@gmail.com (1) - Internet Calendars - Outlook
 
 }
 
@@ -672,7 +896,6 @@ else if Pedersen = out ; open outlook
     WinActivate, Inbox - bhanu.jagasia@jagasiaconsulting.com - Outlook
     WinActivate, ### JCG ARCHIVE ### - bhanu.jagasia@jagasiaconsulting.com - Outlook
     WinActivate, Inbox - bjagasia@auditmation.io - Outlook
-
 }
 
 
@@ -697,6 +920,18 @@ else if Pedersen = uat-audit ; Open auditmation.io UAT
 {
     gui_destroy()
     Run "C:\Program Files\Google\Chrome\Application\chrome.exe" --profile-directory="Profile 3" uat.auditmation.io
+}
+
+else if Pedersen = qa-audit ; Open auditmation.io UAT
+{
+    gui_destroy()
+    Run "C:\Program Files\Google\Chrome\Application\chrome.exe" --profile-directory="Profile 3" qa.auditmation.dev
+}
+
+else if Pedersen = dev-audit ; Open auditmation.io UAT
+{
+    gui_destroy()
+    Run "C:\Program Files\Google\Chrome\Application\chrome.exe" --profile-directory="Profile 3" ci.auditmation.dev
 }
 
 else if Pedersen = nfslack ; Open NF slack
@@ -724,4 +959,10 @@ else if Pedersen = nfslack ; Open NF slack
         }
     }
     return
+}
+
+else if Pedersen = nfjira ; Open auditmation.io jira
+{
+    gui_destroy()
+    Run "C:\Program Files\Google\Chrome\Application\chrome.exe" --profile-directory="Profile 3" https://neverfail.atlassian.net/jira/projects
 }

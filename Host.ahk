@@ -6,8 +6,6 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance
 
-SetCapsLockState, AlwaysOff
-
 ; #InstallKeybdHook
 
 ;-------------------------------------------------------
@@ -28,9 +26,11 @@ return
 ; General settings
 #Include %A_ScriptDir%\Miscellaneous\miscellaneous.ahk
 
-
 ; ALT + G Google Search
 #Include %A_ScriptDir%\look_up.ahk
 
 ; TrayIcon Lib
 #Include TrayIcon.ahk
+
+; Chrome Lib
+#Include Chrome.ahk
