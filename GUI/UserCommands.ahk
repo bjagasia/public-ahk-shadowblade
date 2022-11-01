@@ -171,12 +171,6 @@ else if Pedersen = bjs%A_Space% ; BSIO Jira - Search
     gui_search("https://bladestack.atlassian.net/issues/?jql=text%20~%20%22REPLACEME%22")
 }
 
-else if Pedersen = bjira.s ; BSIO Jira - Find/Search
-{
-    gui_destroy()
-    run https://bladestack.atlassian.net/jira/software/c/projects/BKAIZEN/boards/14
-}
-
 
 else if Pedersen = aorders ; Amazon Orders
 {
