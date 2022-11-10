@@ -125,6 +125,12 @@ else if Pedersen = face ; facebook.com
     run www.facebook.com
 }
 
+else if Pedersen = shoplist ; shoppinglist
+{
+    gui_destroy()
+    run https://shoppinglist.google.com/
+}
+
 
 else if Pedersen = miro ; miro.com
 {
@@ -210,7 +216,7 @@ else if Pedersen = erl-antd ; Anthology ERL Dashboard
     run https://app.smartsheet.com/dashboards/hjf6c25h6hC7hP629Cv3cfvchJHm2f4v5hMJ4Q41
 }
 
-else if Pedersen = dash-weka ; Weka.io Dashboard
+else if Pedersen = gap-weka ; Weka.io Dashboard
 {
     gui_destroy()
     run https://app.smartsheet.com/dashboards/Q3rmcQ53RrG8VHvFWWmGgf9wHwWppVvRqX9gMR21
@@ -228,6 +234,13 @@ else if Pedersen = github ;  GitHub
     run https://github.com/
 }
 
+
+else if Pedersen = zrec ;  zoom recordings
+{
+    gui_destroy()
+    run https://zoom.us/recording/management
+}
+
 else if Pedersen = spek ; spekcleaning
 {
     gui_destroy()
@@ -238,6 +251,14 @@ else if Pedersen = red ; reddit.com
     gui_destroy()
     run www.reddit.com
 }
+
+else if Pedersen = gphotos ; Google Calendar
+{
+    gui_destroy()
+    run https://photos.google.com/
+}
+
+
 else if Pedersen = gcal ; Google Calendar
 {
     gui_destroy()
@@ -336,6 +357,32 @@ else if Pedersen = slack ; Open slack
     return
 }
 
+else if Pedersen = teams ; Open Teams
+{
+    gui_destroy()
+    DetectHiddenWindows, Off
+    Process, Exist, Teams.exe
+    teamsPid = %ErrorLevel%
+    IfWinNotExist, ahk_pid %teamsPid%
+    {
+        TrayIcon_Button("Teams.exe")
+    }
+    Else
+    {
+        IfWinActive, ahk_pid %teamsPid%
+        {
+            WinActivate, ahk_pid %teamsPid%
+        }
+        Else
+        {
+            WinActivate, ahk_pid %teamsPid%
+        }
+    }
+    return
+}
+
+
+
 else if Pedersen = bsio-slack ; Open BSIO Slack
 {
     gui_destroy()
@@ -362,6 +409,11 @@ else if Pedersen = bsio-slack ; Open BSIO Slack
     }
     return
 }
+
+
+
+
+
 
 else if Pedersen = zoom ; Open Zoom
 {
@@ -399,45 +451,7 @@ else if Pedersen = zoom ; Open Zoom
     return
 }
 
-else if Pedersen = zoonf ; Open Zoom, Switch Accounts to NF Zoom
-{
-    gui_destroy()
-    DetectHiddenWindows, On
-    Process, Exist, Zoom.exe
-    zoomPid = %ErrorLevel%
-    IfWinNotExist, ahk_class ZPPTMainFrmWndClassEx WinActivate, ahk_class ZPPTMainMenuWndClass
-    {
-        TrayIcon_Button("zoom.exe")
-        WinRestore, ahk_class ZPPTMainMenuWndClass
-        Sleep 100
-        Send, {Space}
-        SendInput {Down 13}
-        Send, {Space}
-        Send ^a
-        Send {Delete}
-        Send bjagasia@neverfail.com
-        Send {Tab}
-    }
-    Else
-    {
-        IfWinActive, ahk_class ZPPTMainMenuWndClass
-        {
-            Send, {Space}
-            SendInput {Down 13}
-            Send, {Space}
-        }
-        Else
-        {
-            WinActivate, ahk_class ZPPTMainFrmWndClassEx
-            WinRestore, ahk_class ZPPTMainFrmWndClassEx
-            WinActivate, ahk_class ZPPTMainMenuWndClass
-            Send, {Space}
-            SendInput {Down 13}
-            Send, {Space}
-        }
-    }
-    return
-}
+
 
 else if Pedersen = zoobsio ; Open Zoom, Switch Accounts to bsio
 {
@@ -483,11 +497,70 @@ else if Pedersen = zoobsio ; Open Zoom, Switch Accounts to bsio
     return
 }
 
+else if Pedersen = workapps ; launch work apps
+{
+    gui_destroy()
+    DetectHiddenWindows, On
+    Run "C:\Program Files\TechSmith\Snagit 2023\SnagitCapture.exe"
+    Run "C:\Users\Admin\AppData\Local\Obsidian\Obsidian.exe"
+    Run "C:\Users\Admin\AppData\Local\slack\app-4.28.184\slack.exe"
+    Run "C:\Users\Admin\AppData\Local\Microsoft\Teams\current\Teams.exe"
+    Run "C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE"  
+    Run "C:\Program Files\Everything 1.5a\Everything64.exe"
+}
+
+else if Pedersen = rlight ; launch ring light control center
+{
+    gui_destroy()
+    DetectHiddenWindows, On
+    Run "C:\Program Files\Elgato\ControlCenter\ControlCenter.exe"
+}
+
+else if Pedersen = killappsg ; kill apps - performance mode
+{
+    gui_destroy()
+    DetectHiddenWindows, On
+    Process, Close, Zoom.exe
+    Process, Close, slack.exe
+    Process, Close, SnagitCapture.exe    
+    Process, Close, Teams.exe
+    Process, Close, synergys.exe
+    Process, Close, OUTLOOK.EXE
+    Process, Close, chrome.exe
+    Process, Close, acrotray.exe
+    Process, Close, Obsidian.exe
+    Process, Close, caffeine64.exe
+    Process, Close, Everything64.exe
+    Run "C:\Program Files\Elgato\ControlCenter\ControlCenter.exe"
+}
+
+else if Pedersen = killteams ; kill teams
+{
+    gui_destroy()
+    DetectHiddenWindows, On
+    Process, Close, Teams.exe
+}
+
+else if Pedersen = killtemp ; kill temp monitoring
+{
+    gui_destroy()
+    DetectHiddenWindows, On
+    Process, Close, HWiNFO64.EXE
+    Process, Close, hw
+}
+
+
 else if Pedersen = killzoom ; kill zoom
 {
     gui_destroy()
     DetectHiddenWindows, On
     Process, Close, Zoom.exe
+}
+
+else if Pedersen = killslack ; kill snagit
+{
+    gui_destroy()
+    Process, Close, slack.exe
 }
 
 else if Pedersen = killsnag ; kill snagit
@@ -689,7 +762,7 @@ else if Pedersen = ? ; Tooltip with list of commands
 ;;; BSIO - SMARTSHEET ;;;
 ;-------------------------------------------------------------------------------
 
-else if Pedersen = anom-dash ; Anomali Advisory Project Dashboard
+else if Pedersen = dash-anomali ; Anomali Advisory Project Dashboard
 {
     gui_destroy()
     run "https://app.smartsheet.com/dashboards/Qm8QpCj637Hm392FC54MFgjrM496j7jP25ghr341"
@@ -851,7 +924,7 @@ else if Pedersen = box-root ; Root Box
     run "https://bladestackio.app.box.com/folder/0"
 }
 
-else if Pedersen = box-blackboard ; Blackboard Box
+else if Pedersen = box-ant ; Anthology Box
 {
     gui_destroy()
     run "https://bladestackio.app.box.com/folder/176157435309"
