@@ -26,7 +26,7 @@ if A_Is64bitOS && A_PtrSize != 8
 ;-------------------------------------------------------------------------------
 ;;; SEARCH GOOGLE ;;;
 ;-------------------------------------------------------------------------------
-if BSIO = g%A_Space% ; Search Google
+if BSIO = g%A_Space% ; Search Google 
 {
     gui_search_title = LMGTFY
     gui_search("https://www.google.com/search?num=50&safe=off&site=&source=hp&q=REPLACEME&btnG=Search&oq=&gs_l=")
