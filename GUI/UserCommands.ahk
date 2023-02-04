@@ -1,12 +1,12 @@
 ; Note: Code below allows elevated processed to be terminated by AHK. You have to ensure you have AHK 
-; installed with X64 as default. 
-#SingleInstance force
-if !InStr(A_AhkPath, "_UIA.exe")
-{
-	newPath := RegExReplace(A_AhkPath, "\.exe", "U" (A_PtrSize * 8) "_UIA.exe")
-	Run % StrReplace(DllCall("Kernel32\GetCommandLine", "Str"), A_AhkPath, newPath)
-	ExitApp
-}
+; ; installed with X64 as default. 
+; #SingleInstance force
+; if !InStr(A_AhkPath, "_UIA.exe")
+; {
+; 	newPath := RegExReplace(A_AhkPath, "\.exe", "U" (A_PtrSize * 8) "_UIA.exe")
+; 	Run % StrReplace(DllCall("Kernel32\GetCommandLine", "Str"), A_AhkPath, newPath)
+; 	ExitApp
+; }
 
 
 
