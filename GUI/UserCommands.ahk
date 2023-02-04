@@ -9,6 +9,7 @@ if !InStr(A_AhkPath, "_UIA.exe")
 }
 
 
+
 if A_Is64bitOS && A_PtrSize != 8
 {
     ahkPath := RegExReplace(A_AhkPath, "AutoHotkey(U.+)?\.exe", "AutoHotkeyU64.exe")
