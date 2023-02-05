@@ -13,3 +13,4 @@ synergy =  "C:\Program Files\Synergy\synergys.exe" ; Synergy
 muteme = "C:\Users\Admin\AppData\Local\muteme_client\app-0.12.2\MuteMe-Client.exe" ; MuteMe Client
 code = "C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\code.exe" ; MS VS Code
 wslTerm = "C:\Users\Admin\AppData\Local\Microsoft\WindowsApps\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\wt.exe" ; WSL Terminal
+temp = "C:\Program Files\HWiNFO64\HWiNFO64.EXE" ; HWiNFO64 Temp

@@ -100,13 +100,13 @@ else if BSIO = killtemp ; kill temp monitoring
 else if BSIO = snag ; open snagit
 {
     gui_destroy()
-    Run "C:\Program Files\TechSmith\Snagit 2023\SnagitCapture.exe"
+    Run %snagit%
 }
 
 else if BSIO = temp ; open temps
 {
     gui_destroy()
-    Run "C:\Program Files\HWiNFO64\HWiNFO64.EXE"
+    Run %temp%
 }
 
 else if BSIO = sound ; Restart SoundBlaster Audio Service
