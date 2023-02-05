@@ -115,3 +115,8 @@ else if BSIO = sound ; Restart SoundBlaster Audio Service
     Run, cmd /c sc stop CTAudSvcService & sc start CTAudSvcService
 }
 
+else if BSIO = vb ; vegetable and butcher
+{
+    gui_destroy()
+    run https://vegetableandbutcher.com/account
+}

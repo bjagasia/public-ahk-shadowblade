@@ -171,11 +171,6 @@ else if BSIO = clock ; clock app
 }
 
 
-else if BSIO = vb ; vegetable and butcher
-{
-    gui_destroy()
-    run https://vegetableandbutcher.com/account
-}
 
 else if BSIO = cleanscreen ; clean screen / black screen
 {
