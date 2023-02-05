@@ -50,10 +50,12 @@ gui_spawn:
     Gui, Color, 1d1f21, 282a2e
     Gui, +AlwaysOnTop -SysMenu +ToolWindow -caption +Border
     Gui, Font, s11, Segoe UI
-    Gui, Add, Text, %gui_control_options% vgui_main_title, ( ͡° ͜ʖ ͡°)
+    bsioLogo = %A_ScriptDir%\GUI\BSIOAHKWhiteLogo.png
+    FileInstall, BSIOAHKWhiteLogo.png, %bsioLogo%, 1
+    Gui, Add, Picture,w200 h53, %bsioLogo%
     Gui, Font, s10, Segoe UI
     Gui, Add, Edit, %gui_control_options% vBSIO gFindus
-    Gui, Show,, myGUI
+    Gui, Show,, myGUIn
     return
 
 ;-------------------------------------------------------------------------------
