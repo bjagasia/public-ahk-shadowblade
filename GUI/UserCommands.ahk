@@ -640,9 +640,6 @@ else if BSIO = killsnag ; kill snagit
 
 
 
-
-
-
 else if BSIO = obi ; Obsidian Quick Capture Note
 {
     gui_destroy()
@@ -701,12 +698,12 @@ else if BSIO = dir ; Open the directory for this script
 else if BSIO = host ; Edit host script
 {
     gui_destroy()
-    run, C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\code.exe "%A_ScriptFullPath%"
+    run, %code% "%A_ScriptFullPath%"
 }
 else if BSIO = edit ; Edit GUI user commands
 {
     gui_destroy()
-    run, C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\code.exe "%A_ScriptDir%\GUI\UserCommands.ahk"
+    run, %code% "%A_ScriptDir%\GUI\UserCommands.ahk"
 }
 
 
