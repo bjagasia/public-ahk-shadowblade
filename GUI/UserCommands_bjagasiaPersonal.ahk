@@ -31,28 +31,27 @@ else if BSIO = caffe ; Caffeine
 else if BSIO = term ; Open WSL Terminal
 {
     gui_destroy()
-    run "C:\Users\Admin\AppData\Local\Microsoft\WindowsApps\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\wt.exe"
+    run %wslTerm%
 }
 
 else if BSIO = code ; Open Visual Code
 {
     gui_destroy()
-    Run "C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\code.exe"
+    Run %code%
 }
 
 else if BSIO = workapps ; launch work apps
     {
         gui_destroy()
         DetectHiddenWindows, On
-        Run "C:\Program Files\TechSmith\Snagit 2023\SnagitCapture.exe"
-        Run "C:\Users\Admin\AppData\Local\Obsidian\Obsidian.exe"
-        Run "C:\Users\Admin\AppData\Local\slack\app-4.28.184\slack.exe"
-        Run "C:\Users\Admin\AppData\Local\Microsoft\Teams\current\Teams.exe"
-        Run "C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE"  
-        Run "C:\Program Files\Everything 1.5a\Everything64.exe"
-        Run "C:\Program Files\Everything 1.5a\Everything64.exe"
-        Run "C:\Program Files\Synergy\synergys.exe"
-        Run "C:\Users\Admin\AppData\Local\muteme_client\app-0.12.2\MuteMe-Client.exe"
+        Run %snagit%
+        Run %obsidian%
+        Run %slack%
+        Run %teams%
+        Run %outlook%
+        Run %everything%
+        Run %synergy%
+        Run %muteme%
     }
 
 else if BSIO = rlight ; launch ring light control center
