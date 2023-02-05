@@ -71,6 +71,7 @@ Findus:
     Gui, Submit, NoHide
     #Include %A_ScriptDir%\GUI\UserCommands.ahk
     #Include %A_ScriptDir%\GUI\UserCommands_bjagasiaPersonal.ahk
+    #Include %A_ScriptDir%\GUI\env.ahk
     return
 
 ;

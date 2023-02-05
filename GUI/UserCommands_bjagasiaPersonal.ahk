@@ -59,7 +59,7 @@ else if BSIO = rlight ; launch ring light control center
 {
     gui_destroy()
     DetectHiddenWindows, On
-    Run "C:\Program Files\Elgato\ControlCenter\ControlCenter.exe"
+    Run %rlight%
 }
 
 else if BSIO = killappsg ; kill apps - performance mode
@@ -86,7 +86,7 @@ else if BSIO = killappsg ; kill apps - performance mode
     Process, Close, caffeine64.exe
     Process, Close, Everything64.exe
     Process, Close, Everything64.exe
-    Run "C:\Program Files\Elgato\ControlCenter\ControlCenter.exe"
+    Run %rlight%
 }
 
 else if BSIO = killtemp ; kill temp monitoring
