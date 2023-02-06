@@ -1018,25 +1018,16 @@ else if BSIO = cal ; open outlook calendar
 else if BSIO = out ; open outlook
 {
     gui_destroy()
-    DetectHiddenWindows, On
-    WinActivate, Inbox - bjagasia@bladestack.io - Outlook
-    WinActivate, ### BSIO ARCHIVE ### - bjagasia@bladestack.io - Outlook
-    WinActivate, Sent Items - bjagasia@bladestack.io - Outlook
-    WinActivate, Drafts - bjagasia@bladestack.io - Outlook
-    WinActivate, Inbox - bhanu.jagasia@jagasiaconsulting.com - Outlook
-    WinActivate, ### JCG ARCHIVE ### - bhanu.jagasia@jagasiaconsulting.com - Outlook
-    WinActivate, Inbox - bjagasia@auditmation.io - Outlook
-}
+    Process, Exist, OUTLOOK.EXE
+    If (ErrorLevel != 0)
+        {
+            WinActivate ahk_class rctrl_renwnd32
+            WinWaitActive ahk_class rctrl_renwnd32
+            Send %keystroke%
+            ahk_exe = OUTLOOK.EXE
+            DetectHiddenWindows, On
+        }
+        else
+            Run %outlook% 
 
-
-else if BSIO = out-b ; open BSIO outlook
-{
-    gui_destroy()
-	try
-		outlookApp := ComObjActive("Outlook.Application")
-	catch
-		outlookApp := ComObjActive("Outlook.Application")
-
-	JCGFolder := outlookApp.GetDefaultFolder(6)
-	JCGFolder.Display
 }

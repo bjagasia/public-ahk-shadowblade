@@ -14,3 +14,4 @@ muteme = "C:\Users\Admin\AppData\Local\muteme_client\app-0.12.2\MuteMe-Client.ex
 code = "C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\code.exe" ; MS VS Code
 wslTerm = "C:\Users\Admin\AppData\Local\Microsoft\WindowsApps\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\wt.exe" ; WSL Terminal
 temp = "C:\Program Files\HWiNFO64\HWiNFO64.EXE" ; HWiNFO64 Temp
+outlook = "C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE" ; MS Outlook
