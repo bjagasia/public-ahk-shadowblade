@@ -1,10 +1,10 @@
-﻿#SingleInstance force
-if !InStr(A_AhkPath, "_UIA.exe")
-{
-	newPath := RegExReplace(A_AhkPath, "\.exe", "U" (A_PtrSize * 8) "_UIA.exe")
-	Run % StrReplace(DllCall("Kernel32\GetCommandLine", "Str"), A_AhkPath, newPath)
-	ExitApp
-}
+﻿; #SingleInstance force
+; if !InStr(A_AhkPath, "_UIA.exe")
+; {
+; 	newPath := RegExReplace(A_AhkPath, "\.exe", "U" (A_PtrSize * 8) "_UIA.exe")
+; 	Run % StrReplace(DllCall("Kernel32\GetCommandLine", "Str"), A_AhkPath, newPath)
+; 	ExitApp
+; }
 
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
@@ -39,4 +39,4 @@ return
 #Include TrayIcon.ahk
 
 ; Chrome Lib
-#Include Chrome.ahk
+; #Include Chrome.ahk
