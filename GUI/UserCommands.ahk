@@ -295,6 +295,12 @@ else if BSIO = dash-ant ; Anthology Dashboard
     run https://app.smartsheet.com/dashboards/g824frhC4pC3JvhQ8JcJ2mRCv39JXqF82jCr58M1
 }
 
+else if BSIO = dash-hrc ; Harvard RC Dashboard
+{
+    gui_destroy()
+    run https://app.smartsheet.com/dashboards/qQfgMFXmH9ppF22wG6JvcvXpmFcm9fvJ6mG76451
+}
+
 else if BSIO = act-ant ; Anthology Dashboard
 {
     gui_destroy()
