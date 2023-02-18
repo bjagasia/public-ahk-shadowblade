@@ -707,6 +707,12 @@ else if BSIO = edit ; Edit GUI user commands
     run, %code% "%A_ScriptDir%\GUI\UserCommands.ahk"
 }
 
+else if BSIO = env ; Edit Env Variables commands
+{
+    gui_destroy()
+    run, %code% "%A_ScriptDir%\GUI\env.ahk"
+}
+
 
 ;-------------------------------------------------------------------------------
 ;;; TYPE RAW TEXT ;;;
