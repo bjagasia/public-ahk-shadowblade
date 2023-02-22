@@ -85,6 +85,8 @@ else if BSIO = killappsg ; kill apps - performance mode
     Process, Close, caffeine64.exe
     Process, Close, Everything64.exe
     Process, Close, Everything64.exe
+    Process, Close, WindowsTerminal.exe
+    Process, Close, ApplicationFrameHost.exe
     Run %rlight%
 }
 

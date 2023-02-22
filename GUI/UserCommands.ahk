@@ -1020,26 +1020,33 @@ else if BSIO = box-ant ; Anthology Box
 else if BSIO = cal ; open outlook calendar
 {
     gui_destroy()
-    DetectHiddenWindows, On
-    WinActivate, Calendar - bjagasia@bladestack.io - Outlook
-    WinActivate, lollybaggins@gmail.com - Internet Calendars - Outlook
-    WinActivate, lollybaggins@gmail.com (1) - Internet Calendars - Outlook
+   ; Connect to the Outlook application.
+   Outlook := ComObjCreate("Outlook.Application")
+   ; Get the MAPI namespace.
+   Namespace := Outlook.GetNamespace("MAPI")
+   ; Get the default calendar folder.
+   Calendar := Namespace.GetDefaultFolder(9)
+   ; Display the calendar.
+   Calendar.Display
+   ; Release the objects.
+   Calendar := ""
+   Namespace := ""
+   Outlook := ""
+return
 
 }
 
 else if BSIO = out ; open outlook
 {
     gui_destroy()
-    Process, Exist, OUTLOOK.EXE
-    If (ErrorLevel != 0)
-        {
-            WinActivate ahk_class rctrl_renwnd32
-            WinWaitActive ahk_class rctrl_renwnd32
-            Send %keystroke%
-            ahk_exe = OUTLOOK.EXE
-            DetectHiddenWindows, On
-        }
-        else
-            Run %outlook% 
-
+    Outlook := ComObjCreate("Outlook.Application")
+    Namespace := Outlook.GetNamespace("MAPI")
+    Account := Namespace.Folders.Item("bjagasia@bladestack.io")
+    Folder := Account.Folders.Item("Inbox")
+    Folder.Display
+    Folder := ""
+    Account := ""
+    Namespace := ""
+    Outlook := ""
+    return
 }

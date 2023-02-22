@@ -12,6 +12,6 @@ everything = "%A_ProgramFiles%\Everything 1.5a\Everything64.exe" ; VoidTools Eve
 synergy =  "%A_ProgramFiles%\Synergy\synergys.exe" ; Synergy
 muteme = "C:\Users\Admin\AppData\Local\muteme_client\app-0.13.1\MuteMe-Client.exe" ; MuteMe Client
 code = "C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\code.exe" ; MS VS Code
-wslTerm = "C:\Users\%A_UserName%\AppData\Local\Microsoft\WindowsApps\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\wt.exe" ; WSL Terminal
+wslTerm = "C:\Program Files\WindowsApps\Microsoft.WindowsTerminalPreview_1.17.10235.0_x64__8wekyb3d8bbwe\WindowsTerminal.exe" ; WSL Terminal
 temp = "%A_ProgramFiles%\HWiNFO64\HWiNFO64.EXE" ; HWiNFO64 Temp
 outlook = "%A_ProgramFiles%\Microsoft Office\root\Office16\OUTLOOK.EXE" ; MS Outlook
