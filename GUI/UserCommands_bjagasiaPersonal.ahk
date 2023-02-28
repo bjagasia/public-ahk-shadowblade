@@ -23,10 +23,10 @@ else if BSIO = kader ; kader barber
 }
 
 else if BSIO = caffe ; Caffeine
-    {
+{
         gui_destroy()
         run "C:\Users\Admin\OneDrive - bladestack.io\# BACKUPS\# PERSONAL BACKUP\Downloads Backup 2021-10-05\Archive\caffeine\caffeine64.exe"
-    }
+}
 
 else if BSIO = term ; Open WSL Terminal
 {
@@ -41,18 +41,18 @@ else if BSIO = code ; Open Visual Code
 }
 
 else if BSIO = workapps ; launch work apps
-    {
-        gui_destroy()
-        DetectHiddenWindows, On
-        Run %snagit%
-        Run %obsidian%
-        Run %slack%
-        Run %teams%
-        Run %outlook%
-        Run %everything%
-        Run %synergy%
-        Run %muteme%
-    }
+{
+    gui_destroy()
+    DetectHiddenWindows, On
+    Run %snagit%
+    Run %obsidian%
+    Run %slack%
+    Run %teams%
+    Run %outlook%
+    Run %everything%
+    Run %synergy%
+    Run %muteme%
+}
 
 else if BSIO = rlight ; launch ring light control center
 {
@@ -85,16 +85,18 @@ else if BSIO = killappsg ; kill apps - performance mode
     Process, Close, caffeine64.exe
     Process, Close, Everything64.exe
     Process, Close, Everything64.exe
+    Process, Close, WindowsTerminal.exe
+    Process, Close, ApplicationFrameHost.exe
     Run %rlight%
 }
 
 else if BSIO = killtemp ; kill temp monitoring
-    {
-        gui_destroy()
-        DetectHiddenWindows, On
-        Process, Close, HWiNFO64.EXE
-        Run, *RunAs "taskkill" /IM "HWiNFO64.EXE" /F
-    }
+{
+    gui_destroy()
+    DetectHiddenWindows, On
+    Process, Close, HWiNFO64.EXE
+    Run, *RunAs "taskkill" /IM "HWiNFO64.EXE" /F
+}
 
     
 else if BSIO = snag ; open snagit
