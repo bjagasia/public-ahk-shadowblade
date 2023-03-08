@@ -60,9 +60,6 @@ There is a function, `gui_search(url)`, defined in this script that you can call
 
 Now we can translate from English to Japanese in a heartbeat.
 
-### How it works
-Disclaimer: Initially, this was not really written to be shared or used by others, so it is not properly documented and some of the variable names are not self-explanatory and some are in danish. I'm sorry about that. However if you don't go digging too deep, you should not get in trouble. The `UserCommands.ahk` file should be easy to edit.
-
 Here are some quick tips about the script and how it works:
 
 ##### Function `gui_destroy()`
