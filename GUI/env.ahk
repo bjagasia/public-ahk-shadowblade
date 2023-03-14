@@ -15,3 +15,4 @@ code = "C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\code.exe" ; MS V
 wslTerm = "C:\Program Files\WindowsApps\Microsoft.WindowsTerminalPreview_1.17.10235.0_x64__8wekyb3d8bbwe\WindowsTerminal.exe" ; WSL Terminal 
 temp = "%A_ProgramFiles%\HWiNFO64\HWiNFO64.EXE" ; HWiNFO64 Temp
 outlook = "%A_ProgramFiles%\Microsoft Office\root\Office16\OUTLOOK.EXE" ; MS Outlook
+kindle = "C:\Users\Admin\AppData\Local\Amazon\Kindle\application\Kindle.exe" ; Kindle
