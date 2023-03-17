@@ -812,12 +812,6 @@ else if BSIO = stake-ant ; Anthology Dashboard
     run https://app.smartsheet.com/sheets/28jCv8wjX29cPQQ4MR2fqW7v9h2CMXHQv5vQJ481?view=grid
 }
 
-else if BSIO = dash-ant ; Anthology Dashboard - Action Tracker with Form
-{
-    gui_destroy()
-    run https://app.smartsheet.com/sheets/6gFMjqgwjGHFFxXFjQhR8vJV64qq6c8qx2hqR8c1?view=grid
-}
-
 
 else if BSIO = dash-weka ; Weka.io Advsiory Dashboard
 {
