@@ -237,10 +237,12 @@ else if BSIO = ama%A_Space% ; Amazon Search
 }
 
 
-else if BSIO = jticket ; BSIO Jira - Create JIRA Ticket
+else if BSIO = bjira.c ; BSIO Jira - Create JIRA Ticket
 {
     gui_destroy()
-    run https://bladestack.atlassian.net/jira/projects
+    Run, %jiraURL%
+    Sleep, 2000 ; Wait for 2 seconds for the page to load
+    Send, c ; Press "c" key to open the create issue dialog
 }
 
 

@@ -17,6 +17,7 @@ temp = "%A_ProgramFiles%\HWiNFO64\HWiNFO64.EXE" ; HWiNFO64 Temp
 outlook = "%A_ProgramFiles%\Microsoft Office\root\Office16\OUTLOOK.EXE" ; MS Outlook
 kindle = "C:\Users\Admin\AppData\Local\Amazon\Kindle\application\Kindle.exe" ; Kindle
 zoom = "C:\Users\Admin\AppData\Roaming\Zoom\bin\Zoom.exe" ; Zoom
+jiraURL := "https://bladestack.atlassian.net/jira/" ; Jira URL
 
 
 
@@ -31,3 +32,4 @@ IntDialingCode = "+15712694272" ; International Number in full
 DownloadsPath = "D:\bjagasia\Downloads" ; Path to your Downloads
 BoxSyncPrefix= "D:\Box Sync\Box Sync" ; Path to your BoxSync
 JiraUserID = "62c593724d60fcc2579659ec"  ; This can be grabbed from the Jira URL
+
