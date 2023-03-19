@@ -39,5 +39,5 @@ return
 #Include TrayIcon.ahk
 
 ; Chrome Lib
-#Include Chrome.ahk
+; #Include Chrome.ahk
 

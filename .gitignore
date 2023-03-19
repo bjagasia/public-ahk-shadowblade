@@ -4,6 +4,7 @@ GUI/UserCommands_bjagasiaPersonal.ahk
 
 # Additional Libaries and Modules
 CTAudSvcService.bat
+Chrome.ahk
 Examples/
 LICENSE
 PSTools/
