@@ -1,10 +1,12 @@
+
+
 ;
 ;  Environment Variables
 ;
 
 rlight = "%A_ProgramFiles%\Elgato\ControlCenter\ControlCenter.exe" ; Elgato Ring Light
 snagit = "C:\Program Files\TechSmith\Snagit 2023\SnagitCapture.exe" ; SnagIt Capture
-obsidan = "C:\Users\Admin\AppData\Local\Obsidian" ; Obsidian
+obsidan = "C:\Users\Admin\AppData\Local\Obsidian.exe" ; Obsidian
 slack = "C:\Users\Admin\AppData\Local\slack\slack.exe" ; Slack
 teams = "C:\Users\Admin\AppData\Local\Microsoft\Teams\current\Teams.exe" ; Teams
 outlook = "%A_ProgramFiles%\Microsoft Office\root\Office16\OUTLOOK.EXE" ; outlook
@@ -23,7 +25,7 @@ jiraURL := "https://bladestack.atlassian.net/jira/" ; Jira URL
 
 ; User Inputs
 SystemDriveRoot = C: ; Root Drive Letter
-AppDataPathPrefeix = "C:\Users\mark" ; Path to your AppData
+AppDataPathPrefeix = "C:\Users\bjagasia" ; Path to your AppData
 ObsidianVaultID = "dafb97a6f702913e" ; Obsidian Vault ID
 AccountEmail = "bjagasia@bladestack.io" ; bladestack email 
 MyName = "Bhanu Jagasia" ; Name

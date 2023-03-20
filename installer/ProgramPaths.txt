@@ -1,0 +1,6 @@
+Notepad++="C:\Program Files\Notepad++\notepad++.exe"
+Snagit 2023="C:\Program Files\TechSmith\Snagit 2023"
+WinSCP="C:\Program Files (x86)\WinSCP"
+Slack="C:\Program Files\DigiDNA\iMazing\Manifest Support\com.tinyspeck.slackmacgap manifest-support.plist"
+Obsidian="C:\Program Files\Adobe\Adobe Illustrator 2023\Support Files\Contents\Windows\Material-Resources\Default_Substance_Materials\ominous_obsidian.png"
+
