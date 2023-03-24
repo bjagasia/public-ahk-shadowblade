@@ -9,7 +9,6 @@ snagit = "C:\Program Files\TechSmith\Snagit 2023\SnagitCapture.exe" ; SnagIt Cap
 obsidan = "C:\Users\Admin\AppData\Local\Obsidian.exe" ; Obsidian
 slack = "C:\Users\Admin\AppData\Local\slack\slack.exe" ; Slack
 teams = "C:\Users\Admin\AppData\Local\Microsoft\Teams\current\Teams.exe" ; Teams
-outlook = "%A_ProgramFiles%\Microsoft Office\root\Office16\OUTLOOK.EXE" ; outlook
 everything = "%A_ProgramFiles%\Everything 1.5a\Everything64.exe" ; VoidTools Everything
 synergy =  "%A_ProgramFiles%\Synergy\synergys.exe" ; Synergy
 muteme = "C:\Users\Admin\AppData\Local\muteme_client\MuteMe-Client.exe" ; MuteMe Client

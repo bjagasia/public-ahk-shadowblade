@@ -222,6 +222,12 @@ else if BSIO = bjira.stand ; BSIO Jira - Standup
     run https://bladestack.atlassian.net/jira/software/c/projects/BKAIZEN/boards/14
 }
 
+else if BSIO = bjira.dash ; BSIO Jira - Dashboard
+{
+    gui_destroy()
+    run https://bladestack.atlassian.net/plugins/servlet/ac/com.roninpixels.dashboards.jira/dashboards?project.key=FRMA0WDP&project.id=10038
+}
+
 
 else if BSIO = bjira%A_Space% ; BSIO Jira - Search
 {
@@ -241,7 +247,7 @@ else if BSIO = bjira.c ; BSIO Jira - Create JIRA Ticket
 {
     gui_destroy()
     Run, %jiraURL% ; parameterized in the config file
-    Sleep, 2000 ; Wait for 2 seconds for the page to load
+    Sleep, 3000 ; Wait for 3 seconds for the page to load
     Send, c ; Press "c" key to open the create issue dialog
 }
 
@@ -362,6 +368,7 @@ else if BSIO = slack ; Open slack
     IfWinNotExist, ahk_pid %slackPid%
     {
         TrayIcon_Button("slack.exe")
+        Run %slack%
     }
     Else
     {
