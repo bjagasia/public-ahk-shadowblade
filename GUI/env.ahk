@@ -15,10 +15,11 @@ muteme = "C:\Users\Admin\AppData\Local\muteme_client\MuteMe-Client.exe" ; MuteMe
 code = "C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\code.exe" ; MS VS Code
 wslTerm = "C:\Program Files\WindowsApps\Microsoft.WindowsTerminalPreview_1.17.10235.0_x64__8wekyb3d8bbwe\WindowsTerminal.exe" ; WSL Terminal 
 temp = "%A_ProgramFiles%\HWiNFO64\HWiNFO64.EXE" ; HWiNFO64 Temp
-outlook = "%A_ProgramFiles%\Microsoft Office\root\Office16\OUTLOOK.EXE" ; MS Outlook
+outlook = "C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE" ; MS Outlook
 kindle = "C:\Users\Admin\AppData\Local\Amazon\Kindle\application\Kindle.exe" ; Kindle
 zoom = "C:\Users\Admin\AppData\Roaming\Zoom\bin\Zoom.exe" ; Zoom
 jiraURL := "https://bladestack.atlassian.net/jira/" ; Jira URL
+tor = "C:\Tor Browser\Browser\firefox.exe" ; Tor Browser
 
 
 

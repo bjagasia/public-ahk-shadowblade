@@ -751,7 +751,6 @@ else if BSIO = gap-oda ; Odaseva Gap Dash
     run "https://app.smartsheet.com/dashboards/23QWmxj2v2Gm5w2jMXV9QjF8pwVJgHvvFP5Mcwc1"
 }
 
-
 else if BSIO = gap-weka ; Weka Gap Dash
 
 {
@@ -761,12 +760,26 @@ else if BSIO = gap-weka ; Weka Gap Dash
 
 
 
-else if BSIO = conmon-pip ; Perceptyx ConMon Dashboard
+else if BSIO = dash-pip ; Perceptyx ConMon Dashboard
 
 {
     gui_destroy()
     run "https://app.smartsheet.com/dashboards/g3xMjVrqjvjg2mxv52Qf8Q8wH2VMmM3VhVpJqx51"
 }
+
+else if BSIO = sheet-pip ; Perceptyx ConMon Dashboard
+
+    {
+        gui_destroy()
+        run "https://app.smartsheet.com/dashboards/g3xMjVrqjvjg2mxv52Qf8Q8wH2VMmM3VhVpJqx51"
+    }
+
+else if BSIO = report-pip ; Perceptyx ConMon Dashboard
+
+    {
+        gui_destroy()
+        run "https://app.smartsheet.com/dashboards/g3xMjVrqjvjg2mxv52Qf8Q8wH2VMmM3VhVpJqx51"
+    }
 
 
 else if BSIO = hours-pip ; Perceptyx ConMon Dashboard - Hours
@@ -776,31 +789,109 @@ else if BSIO = hours-pip ; Perceptyx ConMon Dashboard - Hours
     run "https://app.smartsheet.com/b/form/0b897cde02b549ab8f36fd3353fbf501"
 }
 
-else if BSIO = activity-ant ; Anthology Activitiy Report
-{
-    gui_destroy()
-    run https://app.smartsheet.com/b/form/3fb66766c84f452398d37e62255eecaf
-}
 
 
 else if BSIO = risk-ant ; Anthology Dashboard - Risk Tracker and Form
-{
-    gui_destroy()
-    run https://app.smartsheet.com/sheets/9hX2hMcR2hrwqQPCmVvqW2CQW53mrp28v7V593p1?view=grid
-}
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/sheets/9hX2hMcR2hrwqQPCmVvqW2CQW53mrp28v7V593p1?view=grid
+    }
 
 else if BSIO = erl-ant ; Anthology Dashboard - Evidence Request List Tracker
-{
-    gui_destroy()
-    run https://app.smartsheet.com/sheets/v2fxGrJgfhQFpJW2gRFC88P9mXGWVC7h3JXqMQR1?view=grid&filterId=3166092154693508
-}
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/sheets/v2fxGrJgfhQFpJW2gRFC88P9mXGWVC7h3JXqMQR1?view=grid&filterId=3166092154693508
+    }
 
 
 else if BSIO = dash-ant ; Anthology Dashboard
-{
-    gui_destroy()
-    run https://app.smartsheet.com/dashboards/g824frhC4pC3JvhQ8JcJ2mRCv39JXqF82jCr58M1
-}
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/dashboards/g824frhC4pC3JvhQ8JcJ2mRCv39JXqF82jCr58M1
+    }
+
+else if BSIO = sheet-ant ; Anthology Sheets
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/folders/V53RcQHQRrpcggMjg5VqVf4389xHFXVwC89mR5v1
+    }
+
+else if BSIO = sheet-hrc ; Harvard RC Sheets
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/folders/6WxVfFXPjX862wc8M39Mc4vcV7wFc4XCwpCx2FJ1
+    }
+
+else if BSIO = rep-ant ; Anthology Reports
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/folders/P2GR79qvHQjCwHg3p8WCFx8WwFFj7Qmg2VcfRGC1
+    }
+
+else if BSIO = rep-hrc ; Harvard RC Reports
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/folders/7PrM863rCwmQxv5WH4mFw8qVmXG9GXqQC7W3w5Q1
+    }
+
+
+else if BSIO = sheet-hrc ; Harvard RC Sheets
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/folders/6WxVfFXPjX862wc8M39Mc4vcV7wFc4XCwpCx2FJ1
+    }
+else if BSIO = rep-oda ; Odaseva FR Mod Reports
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/folders/7PrM863rCwmQxv5WH4mFw8qVmXG9GXqQC7W3w5Q1
+    }
+
+else if BSIO = sheet-oda ; Odaseva FR Mod Sheets
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/folders/Pc92W4xwGwG57vC444XQhcCXWmGWGGxjVqwJj991
+    }
+
+
+else if BSIO = smart-ant ; Anthology Smartsheet Root
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/folders/WchJjM3JGF3F9Rjc7GFXPg586FPQ2XVCP7r4x8M1
+    }
+
+    
+else if BSIO = smart-weka ; Weka Smartsheet Root
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/workspaces/77RrWRmhV26JwMcXVxv57gxwc8V7VG8GjP7WfCf1
+    }
+
+
+else if BSIO = sheet-weka ; Weka Smartsheet Sheets
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/folders/8rJHCm45fRcGHvmPQRCRJ78cvPXRxr66Vw2H5jh1
+    }
+
+
+else if BSIO = rep-weka ; Weka Smartsheet Reports
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/folders/hG982FvgjwFfp5WwqP98rg6FJcj4ghxX7wXp5W31
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
 
 else if BSIO = dash-hrc ; Harvard RC Dashboard
 {
@@ -967,16 +1058,34 @@ return
 }
 
 else if BSIO = out ; open outlook
-{
-    gui_destroy()
-    Outlook := ComObjCreate("Outlook.Application")
-    Namespace := Outlook.GetNamespace("MAPI")
-    Account := Namespace.Folders.Item("bjagasia@bladestack.io")
-    Folder := Account.Folders.Item("Inbox")
-    Folder.Display
-    Folder := ""
-    Account := ""
-    Namespace := ""
-    Outlook := ""
-    return
-}
+    {
+        gui_destroy()
+    
+        ; Check if Outlook is running
+        Process, Exist, OUTLOOK.exe
+        outlookPid = %ErrorLevel%
+    
+        ; If Outlook is not running, start it
+        if !outlookPid
+        {
+            Run %outlook%
+            ; Wait for Outlook to open
+            WinWait, ahk_class rctrl_renwnd32
+        }
+    
+        ; Create and display the specified folder in Outlook
+        Outlook := ComObjCreate("Outlook.Application")
+        Namespace := Outlook.GetNamespace("MAPI")
+        Account := Namespace.Folders.Item("bjagasia@bladestack.io")
+        Folder := Account.Folders.Item("Inbox")
+        Folder.Display
+    
+        ; Release the COM objects
+        Folder := ""
+        Account := ""
+        Namespace := ""
+        Outlook := ""
+    
+        return
+    }
+    
