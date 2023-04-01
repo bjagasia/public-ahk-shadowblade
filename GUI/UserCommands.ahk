@@ -758,7 +758,12 @@ else if BSIO = gap-weka ; Weka Gap Dash
     run "https://app.smartsheet.com/dashboards/Q3rmcQ53RrG8VHvFWWmGgf9wHwWppVvRqX9gMR21"
 }
 
+else if BSIO = gap-blink ; Blink Gap Root
 
+{
+    gui_destroy()
+    run https://app.smartsheet.com/workspaces/gX6cpf8VjwX2rGwpxRRQQqGFQVQMFMH3jgPgqFm1
+}
 
 else if BSIO = dash-pip ; Perceptyx ConMon Dashboard
 
@@ -809,6 +814,21 @@ else if BSIO = dash-ant ; Anthology Dashboard
         gui_destroy()
         run https://app.smartsheet.com/dashboards/g824frhC4pC3JvhQ8JcJ2mRCv39JXqF82jCr58M1
     }
+
+else if BSIO = ext-ant ; Anthology - External Services
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/sheets/X9gcMMMCXq3cjXm7QXgX2R4GHx7VmmhGcM2JRVm1?view=grid
+    }
+
+else if BSIO = ext-form-ant ; Anthology - External Services Form
+{
+    gui_destroy()
+    run https://app.smartsheet.com/b/form/25e387e3f027437781fcf2b573bc8d0e
+}
+
+
+    
 
 else if BSIO = sheet-ant ; Anthology Sheets
     {
