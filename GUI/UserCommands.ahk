@@ -112,7 +112,7 @@ else if BSIO = cmvp%A_Space% ; CMVP Search
 }
 
 
-else if BSIO = frmarket%A_Space% ; Search FR Marketplace
+else if BSIO = frmarket%A_Space% ; Search FR Marketplace # need to be updated to support FR new website
 {
     gui_search_title = Search FedRAMP Marketplace
     gui_search("https://marketplace.fedramp.gov/#!/products?sort=productName&productNameSearch=REPLACEME")
