@@ -82,7 +82,7 @@ else if BSIO = the%A_Space% ; Thesaurus
 
 else if BSIO = ncontrol%A_Space% ; NIST 800-53 R5 Control Search
 {
-    gui_search_title = NIST 800-53 R5 Control Search
+    gui_search_title = NIST 800-53 R5 Control Search - CASE SENSITIVE!
     gui_search("https://csrc.nist.gov/projects/cprt/catalog#/cprt/framework/version/SP_800_53_5_1_0/home?element=REPLACEME")
 }
 
@@ -164,6 +164,7 @@ else if BSIO = miro ; miro.com
     run https://miro.com/app/dashboard/
 }
 
+
 else if BSIO = clock ; clock app
 {
     gui_destroy()
@@ -232,7 +233,7 @@ else if BSIO = bjira.dash ; BSIO Jira - Dashboard
 else if BSIO = bjira%A_Space% ; BSIO Jira - Search
 {
     gui_search_title = Search BSIO Jira
-    gui_search("https://bladestack.atlassian.net/issues/?jql=text%20~%20%22REPLACEME%22")
+    gui_search("https://bladestack.atlassian.net/issues/?jql=summary%20~%20%22REPLACEME%22")
 }
 
 
@@ -286,7 +287,7 @@ else if BSIO = red ; reddit.com
     run www.reddit.com
 }
 
-else if BSIO = gphotos ; Google Calendar
+else if BSIO = gphotos ; Google Photos
 {
     gui_destroy()
     run https://photos.google.com/
@@ -335,7 +336,7 @@ else if BSIO = market ; FedRAMP Marketplace
     run https://marketplace.fedramp.gov/#!/products?sort=productName
 }
 
-else if BSIO = maps ; Google Maps
+else if BSIO = gmaps ; Google Maps
 {
     gui_destroy()
     run https://www.google.com/maps/
@@ -802,6 +803,12 @@ else if BSIO = risk-ant ; Anthology Dashboard - Risk Tracker and Form
         run https://app.smartsheet.com/sheets/9hX2hMcR2hrwqQPCmVvqW2CQW53mrp28v7V593p1?view=grid
     }
 
+else if BSIO = risk-form-ant ; Anthology Dashboard - Risk Tracker Form
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/b/form/447b00eb993c4b7aa620d5740a434ef5
+    }
+
 else if BSIO = erl-ant ; Anthology Dashboard - Evidence Request List Tracker
     {
         gui_destroy()
@@ -809,6 +816,12 @@ else if BSIO = erl-ant ; Anthology Dashboard - Evidence Request List Tracker
     }
 
 
+else if BSIO = erl-form-ant ; Anthology Dashboard - Evidence Request List Tracker
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/b/form/2081ee3ff02b4bf7babee33f8f8ef8c2
+    }
+    
 else if BSIO = dash-ant ; Anthology Dashboard
     {
         gui_destroy()
@@ -827,8 +840,6 @@ else if BSIO = ext-form-ant ; Anthology - External Services Form
     run https://app.smartsheet.com/b/form/25e387e3f027437781fcf2b573bc8d0e
 }
 
-
-    
 
 else if BSIO = sheet-ant ; Anthology Sheets
     {
@@ -900,19 +911,6 @@ else if BSIO = rep-weka ; Weka Smartsheet Reports
         run https://app.smartsheet.com/folders/hG982FvgjwFfp5WwqP98rg6FJcj4ghxX7wXp5W31
     }
     
-
-
-
-
-
-
-
-
-
-
-
-
-
 else if BSIO = dash-hrc ; Harvard RC Dashboard
 {
     gui_destroy()
@@ -925,6 +923,12 @@ else if BSIO = act-ant ; Anthology Dashboard
     run https://app.smartsheet.com/sheets/6gFMjqgwjGHFFxXFjQhR8vJV64qq6c8qx2hqR8c1?view=grid
 }
 
+
+else if BSIO = act-form-ant ; Anthology Action Item Form
+    {
+        gui_destroy()
+        run https://app.smartsheet.com/b/form/d9dfd56597df467ab9c0c32ac8383db2?
+    }
 
 else if BSIO = stake-ant ; Anthology Dashboard
 {

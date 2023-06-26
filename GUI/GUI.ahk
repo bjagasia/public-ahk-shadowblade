@@ -145,6 +145,12 @@ gui_search(url) {
 gui_SearchEnter:
     Gui, Submit
     gui_destroy()
+
+    ; Convert 'gui_SearchEdit' to upper case for 'NIST 800-53 R5 Control Search'
+    if (gui_search_title = "NIST 800-53 R5 Control Search") {
+        StringUpper, gui_SearchEdit, gui_SearchEdit
+    }
+
     query_safe := uriEncode(gui_SearchEdit)
     Loop, %search_urls%
     {
@@ -153,6 +159,7 @@ gui_SearchEnter:
     }
     search_urls := 0
     return
+
 
 ;-------------------------------------------------------------------------------
 ; TOOLTIP
