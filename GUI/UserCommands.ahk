@@ -123,7 +123,7 @@ else if BSIO = t%A_Space% ; Search torrent networks
     gui_search_title = Sharing is caring
     gui_search("https://kickass.to/usearch/REPLACEME")
 }
-else if BSIO = jap ; Translate English to Japanese
+else if BSIO = jp ; Translate English to Japanese
 {
     gui_search_title = English to Japanese
     gui_search("https://translate.google.com/#en/ja/REPLACEME")
