@@ -3,7 +3,6 @@
 ;
 ;  Environment Variables
 ;
-
 rlight = "%A_ProgramFiles%\Elgato\ControlCenter\ControlCenter.exe" ; Elgato Ring Light
 snagit = "C:\Program Files\TechSmith\Snagit 2023\SnagitCapture.exe" ; SnagIt Capture
 snagitEditor = "C:\Program Files\TechSmith\Snagit 2023\SnagitEditor.exe" ; SnagIt Editor
