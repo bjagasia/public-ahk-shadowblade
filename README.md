@@ -84,7 +84,7 @@ Example:
 
 ### Upcoming Features
 - Add OBI ID vault as a user ENV variable - #AHKSB-2
-- Review Enviornment Variable Implementation - #AHKSB-3
+- Review Environment Variable Implementation - #AHKSB-3
 
 
 ### Most recent changes
