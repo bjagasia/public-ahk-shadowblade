@@ -108,7 +108,7 @@ else if BSIO = ndef%A_Space% ; NIST Definition
 else if BSIO = cmvp%A_Space% ; CMVP Search
 {
     gui_search_title = Search CMVP
-    gui_search("https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search?SearchMode=Basic&Vendor=REPLACEME&CertificateStatus=Active&ValidationYear=0")
+    gui_search("https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search?SearchMode=Basic&ModuleName=REPLACEME&CertificateStatus=Active&ValidationYear=0")
 }
 
 
