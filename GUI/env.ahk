@@ -19,7 +19,6 @@ temp = "%A_ProgramFiles%\HWiNFO64\HWiNFO64.EXE" ; HWiNFO64 Temp
 outlook = "C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE" ; MS Outlook
 kindle = "C:\Users\Admin\AppData\Local\Amazon\Kindle\application\Kindle.exe" ; Kindle
 zoom = "C:\Users\Admin\AppData\Roaming\Zoom\bin\Zoom.exe" ; Zoom
-jiraURL := "https://bladestack.atlassian.net/jira/" ; Jira URL
 tor = "C:\Tor Browser\Browser\firefox.exe" ; Tor Browser
 opera = "C:\Users\Admin\AppData\Local\Programs\Opera\launcher.exe" ; Opera Browser
 steam = "C:\Program Files (x86)\Steam\Steam.exe" ; Steam
@@ -30,13 +29,13 @@ steam2 = "C:\Program Files (x86)\Steam\bin\cef\cef.win7x64" ; steam web helper
 
 ; User Inputs
 SystemDriveRoot = C: ; Root Drive Letter
-AppDataPathPrefeix = "C:\Users\bjagasia" ; Path to your AppData
-ObsidianVaultID = "dafb97a6f702913e" ; Obsidian Vault ID
-AccountEmail = "bjagasia@bladestack.io" ; bladestack email 
-MyName = "Bhanu Jagasia" ; Name
-PhoneNumber = "571.269.4272" ; You number
-IntDialingCode = "+15712694272" ; International Number in full
-DownloadsPath = "D:\bjagasia\Downloads" ; Path to your Downloads
-BoxSyncPrefix= "D:\Box Sync\Box Sync" ; Path to your BoxSync
-JiraUserID = "62c593724d60fcc2579659ec"  ; This can be grabbed from the Jira URL
+AppDataPathPrefeix = "" ; Path to your AppData
+ObsidianVaultID = "" ; Obsidian Vault ID
+AccountEmail = "" ; bladestack email 
+MyName = "" ; Name
+PhoneNumber = "" ; You number
+IntDialingCode = "" ; International Number in full
+DownloadsPath = "" ; Path to your Downloads
+BoxSyncPrefix= "" ; Path to your BoxSync
+JiraUserID = ""  ; This can be grabbed from the Jira URL
 

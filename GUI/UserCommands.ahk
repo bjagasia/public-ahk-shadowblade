@@ -145,26 +145,6 @@ else if BSIO = / ; Go to subreddit. This is a quick way to navigate to a specifi
 }
 
 
-else if BSIO = smartsheet ; smartsheet
-{
-    gui_destroy()
-    run https://app.smartsheet.com/b/home
-}
-
-else if BSIO = shoplist ; shoppinglist
-{
-    gui_destroy()
-    run https://shoppinglist.google.com/
-}
-
-
-else if BSIO = miro ; miro.com
-{
-    gui_destroy()
-    run https://miro.com/app/dashboard/
-}
-
-
 else if BSIO = clock ; clock app
 {
     gui_destroy()
@@ -179,12 +159,6 @@ else if BSIO = blk ; clean screen / black screen
 }
 
 
-else if BSIO = boxwebs%A_Space% ; Box Web Search
-{
-    gui_search_title = Search BSIO Box
-    gui_search("https://bladestackio.app.box.com/folder/0/search?isTrashSearch=0&metadata=&owners=&query=REPLACEME&resinSessionID=03cdcffa48d9edce694cec&types=&updatedTime=0&updatedTimeFrom=0&updatedTimeTo=0")
-}
-
 
 
 else if BSIO = Instap ; Instapaper
@@ -194,47 +168,6 @@ else if BSIO = Instap ; Instapaper
 }
 
 
-else if BSIO = logs-slack ; Check slack activity logs
-{
-    gui_destroy()
-    run https://bladestack.slack.com/admin/logs
-}
-
-else if BSIO = bsio ; BSIO website
-{
-    gui_destroy()
-    run https://bladestack.io/
-}
-
-else if BSIO = bjira.a ; BSIO Jira
-{
-    gui_destroy()
-    run https://bladestack.atlassian.net/jira/projects
-}
-
-else if BSIO = bjira.me ; BSIO Jira - Filtered
-{
-    gui_destroy()
-    run https://bladestack.atlassian.net/jira/software/c/projects/BKAIZEN/boards/14?assignee=%JiraUserID%
-}
-else if BSIO = bjira.stand ; BSIO Jira - Standup
-{
-    gui_destroy()
-    run https://bladestack.atlassian.net/jira/software/c/projects/BKAIZEN/boards/14
-}
-
-else if BSIO = bjira.dash ; BSIO Jira - Dashboard
-{
-    gui_destroy()
-    run https://bladestack.atlassian.net/plugins/servlet/ac/com.roninpixels.dashboards.jira/dashboards?project.key=FRMA0WDP&project.id=10038
-}
-
-
-else if BSIO = bjira%A_Space% ; BSIO Jira - Search
-{
-    gui_search_title = Search BSIO Jira
-    gui_search("https://bladestack.atlassian.net/issues/?jql=summary%20~%20%22REPLACEME%22")
-}
 
 
 else if BSIO = ama%A_Space% ; Amazon Search
@@ -244,13 +177,7 @@ else if BSIO = ama%A_Space% ; Amazon Search
 }
 
 
-else if BSIO = bjira.c ; BSIO Jira - Create JIRA Ticket
-{
-    gui_destroy()
-    Run, %jiraURL% ; parameterized in the config file
-    Sleep, 3000 ; Wait for 3 seconds for the page to load
-    Send, c ; Press "c" key to open the create issue dialog
-}
+
 
 
 else if BSIO = awsscope ; AWS Services in Scope - FedRAMP
@@ -261,11 +188,6 @@ else if BSIO = awsscope ; AWS Services in Scope - FedRAMP
 
 
 
-else if BSIO = git-bsio ; BSIO GitHub
-{
-    gui_destroy()
-    run https://github.com/bladestack-io
-}
 
 else if BSIO = github ;  GitHub
 {
@@ -324,11 +246,7 @@ else if BSIO = lin ; Linkedin.com
     run www.linkedin.com
 }
 
-else if BSIO = li-bsio ; BSIO LinkedIn
-{
-    gui_destroy()
-    run https://www.linkedin.com/company/75065597/admin/notifications/all/
-}
+
 
 else if BSIO = market ; FedRAMP Marketplace
 {
@@ -413,38 +331,6 @@ else if BSIO = teams ; Open Teams
 
 
 
-else if BSIO = bsio-slack ; Open BSIO Slack
-{
-    gui_destroy()
-    DetectHiddenWindows, Off
-    Process, Exist, slack.exe
-    slackPid = %ErrorLevel%
-    IfWinNotExist, ahk_pid %slackPid%
-    {
-        TrayIcon_Button("slack.exe")
-        Send ^1
-    }
-    Else
-    {
-        IfWinActive, ahk_pid %slackPid%
-        {
-            WinActivate, ahk_pid %slackPid%
-            Send ^1
-        }
-        Else
-        {
-            WinActivate, ahk_pid %slackPid%
-            Send ^1
-        }
-    }
-    return
-}
-
-
-
-
-
-
 else if BSIO = zoom ; Open Zoom
 {
     gui_destroy()
@@ -483,51 +369,6 @@ else if BSIO = zoom ; Open Zoom
 
 
 
-else if BSIO = zoobsio ; Open Zoom, Switch Accounts to bsio
-{
-    gui_destroy()
-    DetectHiddenWindows, On
-    Process, Exist, Zoom.exe
-    zoomPid = %ErrorLevel%
-    IfWinNotExist, ahk_class ZPPTMainMenuWndClass WinActivate, ahk_class ZPPTMainMenuWndClass
-    {
-        TrayIcon_Button("zoom.exe")
-        WinActivate, ahk_class ZPPTMainMenuWndClass
-    }
-    Else
-    {
-        IfWinActive, ahk_class ZPPTMainMenuWndClass
-        {
-            WinRestore, ahk_class ZPPTMainMenuWndClass
-            Sleep 100
-            Send, {Space}
-            Sleep 10
-            SendInput {Down 13}
-            Send, {Space}
-            Sleep 10
-            Send ^a
-            Sleep 5
-            Send {Delete}
-            Send bjagasia@bladestack.io
-            Send {Tab}
-            Send, {Space}
-            SendInput {Down 13}
-            Send, {Space}
-        }
-        Else
-        {
-            WinActivate, ahk_class ZPPTMainMenuWndClass
-            WinRestore, ahk_class ZPPTMainMenuWndClass
-            WinActivate, ahk_class ZPPTMainMenuWndClass
-            Send, {Space}
-            SendInput {Down 13}
-            Send, {Space}
-        }
-    }
-    return
-}
-
-
 
 else if BSIO = obi ; Obsidian Quick Capture Note
 {
@@ -548,14 +389,14 @@ else if BSIO = obi ; Obsidian Quick Capture Note
             } else {
                 ; Focus
                 WinActivate, % "ahk_id " . window_id
-                Run "obsidian://advanced-uri?vault=dafb97a6f702913e&commandname=QuickAdd: Capture to Daily Notes"
+                Run "REPLACE_ME_WITH_YOUR_OBI_VAULT_URL_API"
             }
         } else {
             if (hidden_obsidian_window_id) {
                 ; Unhide
                 WinShow, % "ahk_id " . hidden_obsidian_window_id
                 WinActivate, % "ahk_id " . hidden_obsidian_window_id
-                Run "obsidian://advanced-uri?vault=dafb97a6f702913e&commandname=QuickAdd: Capture to Daily Notes"
+                Run "REPLACE_ME_WITH_YOUR_OBI_VAULT_URL_API"
                 hidden_obsidian_window_id := false
             } else {
                 ; Launch the app
@@ -564,7 +405,7 @@ else if BSIO = obi ; Obsidian Quick Capture Note
                 SetTitleMatchMode, RegEx
                 WinActivate, i) Obsidian
                 EnvGet, A_LocalAppData, LocalAppData
-                Run "obsidian://advanced-uri?vault=dafb97a6f702913e&commandname=QuickAdd: Capture to Daily Notes"
+                Run "REPLACE_ME_WITH_YOUR_OBI_VAULT_URL_API"
             }
         }
         return
@@ -606,11 +447,7 @@ else if BSIO = env ; Edit Env Variables commands
 ;;; TYPE RAW TEXT ;;;
 ;-------------------------------------------------------------------------------
 
-else if BSIO = @bsio ; Email address
-{
-    gui_destroy()
-    Send, %AccountEmail%
-}
+
 else if BSIO = name ; My name
 {
     gui_destroy()
@@ -694,24 +531,7 @@ else if BSIO = week ; Which week is it?
     weeknumbertrimmed =
 }
 
-else if BSIO = qp ; Quickpart Refresher
-    {
-        gui_destroy()
-        MsgBox,
-        (
-        Quickparts:
-        Document Title: [ Title ] 
-        Company Name: [ Company ]
-        System Name: [ Subject ]
-        Short Name: [ Status ]
-        Cloud Model: [ Comments ]
-        Framework: [ Keywords ]
-        FIPS-199: [ Category ]
-        Impact Level: [ Company Phone ]
-        Author: [ Author ]
-        Approver [ Manager ]
-        )
-    }
+
 
 
 
@@ -722,339 +542,6 @@ else if BSIO = ? ; Tooltip with list of commands
 }
 
 
-
-;-------------------------------------------------------------------------------
-;;; BSIO - SMARTSHEET ;;;
-;-------------------------------------------------------------------------------
-
-else if BSIO = dash-anomali ; Anomali Advisory Project Dashboard
-{
-    gui_destroy()
-    run "https://app.smartsheet.com/dashboards/Qm8QpCj637Hm392FC54MFgjrM496j7jP25ghr341"
-}
-else if BSIO = anom-action ; Anomali Advisory Action Items Dashboard
-{
-    gui_destroy()
-    run "https://app.smartsheet.com/dashboards/JwwVH7ghw9MQGJPPvPgQV9364RmVwpr7qxJ4Mmq1"
-}
-
-else if BSIO = dash-oda ; Odaseva Advisory Smartsheet
-
-{
-    gui_destroy()
-    run "https://app.smartsheet.com/dashboards/5vcPPfch3VQJCWpx6cGQmWfPFcf8hjpPP6xf8841"
-}
-
-else if BSIO = gap-oda ; Odaseva Gap Dash
-
-{
-    gui_destroy()
-    run "https://app.smartsheet.com/dashboards/23QWmxj2v2Gm5w2jMXV9QjF8pwVJgHvvFP5Mcwc1"
-}
-
-else if BSIO = gap-weka ; Weka Gap Dash
-
-{
-    gui_destroy()
-    run "https://app.smartsheet.com/dashboards/Q3rmcQ53RrG8VHvFWWmGgf9wHwWppVvRqX9gMR21"
-}
-
-else if BSIO = gap-blink ; Blink Gap Root
-
-{
-    gui_destroy()
-    run https://app.smartsheet.com/workspaces/gX6cpf8VjwX2rGwpxRRQQqGFQVQMFMH3jgPgqFm1
-}
-
-else if BSIO = dash-pip ; Perceptyx ConMon Dashboard
-
-{
-    gui_destroy()
-    run "https://app.smartsheet.com/dashboards/g3xMjVrqjvjg2mxv52Qf8Q8wH2VMmM3VhVpJqx51"
-}
-
-else if BSIO = sheet-pip ; Perceptyx ConMon Dashboard
-
-    {
-        gui_destroy()
-        run "https://app.smartsheet.com/dashboards/g3xMjVrqjvjg2mxv52Qf8Q8wH2VMmM3VhVpJqx51"
-    }
-
-else if BSIO = report-pip ; Perceptyx ConMon Dashboard
-
-    {
-        gui_destroy()
-        run "https://app.smartsheet.com/dashboards/g3xMjVrqjvjg2mxv52Qf8Q8wH2VMmM3VhVpJqx51"
-    }
-
-
-else if BSIO = hours-pip ; Perceptyx ConMon Dashboard - Hours
-
-{
-    gui_destroy()
-    run "https://app.smartsheet.com/b/form/0b897cde02b549ab8f36fd3353fbf501"
-}
-
-
-
-else if BSIO = risk-ant ; Anthology Dashboard - Risk Tracker and Form
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/sheets/9hX2hMcR2hrwqQPCmVvqW2CQW53mrp28v7V593p1?view=grid
-    }
-
-else if BSIO = risk-form-ant ; Anthology Dashboard - Risk Tracker Form
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/b/form/447b00eb993c4b7aa620d5740a434ef5
-    }
-
-else if BSIO = erl-ant ; Anthology Dashboard - Evidence Request List Tracker
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/sheets/v2fxGrJgfhQFpJW2gRFC88P9mXGWVC7h3JXqMQR1?view=grid&filterId=3166092154693508
-    }
-
-
-else if BSIO = erl-form-ant ; Anthology Dashboard - Evidence Request List Tracker
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/b/form/2081ee3ff02b4bf7babee33f8f8ef8c2
-    }
-    
-else if BSIO = dash-ant ; Anthology Dashboard
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/dashboards/g824frhC4pC3JvhQ8JcJ2mRCv39JXqF82jCr58M1
-    }
-
-else if BSIO = ext-ant ; Anthology - External Services
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/sheets/X9gcMMMCXq3cjXm7QXgX2R4GHx7VmmhGcM2JRVm1?view=grid
-    }
-
-else if BSIO = ext-form-ant ; Anthology - External Services Form
-{
-    gui_destroy()
-    run https://app.smartsheet.com/b/form/25e387e3f027437781fcf2b573bc8d0e
-}
-
-
-else if BSIO = sheet-ant ; Anthology Sheets
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/folders/V53RcQHQRrpcggMjg5VqVf4389xHFXVwC89mR5v1
-    }
-
-else if BSIO = sheet-hrc ; Harvard RC Sheets
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/folders/6WxVfFXPjX862wc8M39Mc4vcV7wFc4XCwpCx2FJ1
-    }
-
-else if BSIO = rep-ant ; Anthology Reports
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/folders/P2GR79qvHQjCwHg3p8WCFx8WwFFj7Qmg2VcfRGC1
-    }
-
-else if BSIO = rep-hrc ; Harvard RC Reports
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/folders/7PrM863rCwmQxv5WH4mFw8qVmXG9GXqQC7W3w5Q1
-    }
-
-
-else if BSIO = sheet-hrc ; Harvard RC Sheets
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/folders/6WxVfFXPjX862wc8M39Mc4vcV7wFc4XCwpCx2FJ1
-    }
-else if BSIO = rep-oda ; Odaseva FR Mod Reports
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/folders/7PrM863rCwmQxv5WH4mFw8qVmXG9GXqQC7W3w5Q1
-    }
-
-else if BSIO = sheet-oda ; Odaseva FR Mod Sheets
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/folders/Pc92W4xwGwG57vC444XQhcCXWmGWGGxjVqwJj991
-    }
-
-
-else if BSIO = smart-ant ; Anthology Smartsheet Root
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/folders/WchJjM3JGF3F9Rjc7GFXPg586FPQ2XVCP7r4x8M1
-    }
-
-    
-else if BSIO = smart-weka ; Weka Smartsheet Root
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/workspaces/77RrWRmhV26JwMcXVxv57gxwc8V7VG8GjP7WfCf1
-    }
-
-
-else if BSIO = sheet-weka ; Weka Smartsheet Sheets
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/folders/8rJHCm45fRcGHvmPQRCRJ78cvPXRxr66Vw2H5jh1
-    }
-
-
-else if BSIO = rep-weka ; Weka Smartsheet Reports
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/folders/hG982FvgjwFfp5WwqP98rg6FJcj4ghxX7wXp5W31
-    }
-    
-else if BSIO = dash-hrc ; Harvard RC Dashboard
-{
-    gui_destroy()
-    run https://app.smartsheet.com/dashboards/qQfgMFXmH9ppF22wG6JvcvXpmFcm9fvJ6mG76451
-}
-
-else if BSIO = act-ant ; Anthology Dashboard
-{
-    gui_destroy()
-    run https://app.smartsheet.com/sheets/6gFMjqgwjGHFFxXFjQhR8vJV64qq6c8qx2hqR8c1?view=grid
-}
-
-
-else if BSIO = act-form-ant ; Anthology Action Item Form
-    {
-        gui_destroy()
-        run https://app.smartsheet.com/b/form/d9dfd56597df467ab9c0c32ac8383db2?
-    }
-
-else if BSIO = stake-ant ; Anthology Dashboard
-{
-    gui_destroy()
-    run https://app.smartsheet.com/sheets/28jCv8wjX29cPQQ4MR2fqW7v9h2CMXHQv5vQJ481?view=grid
-}
-
-
-else if BSIO = dash-weka ; Weka.io Advsiory Dashboard
-{
-    gui_destroy()
-    run https://app.smartsheet.com/dashboards/hwRQx22rrFcffjHgGVC65q8JjwjH3JhgwxvxWrj1
-}
-;-------------------------------------------------------------------------------
-;;; BSIO - NOTION ;;;
-;-------------------------------------------------------------------------------
-
-else if BSIO = nbiz ; Notion - Business Blade
-
-{
-    gui_destroy()
-    run "https://www.notion.so/bladestack/28082810ae784a1093f8274c5c4d3733?v=5f3d700087b64349a17fde230b0f91b8"
-}
-
-else if BSIO = ndue ; Notion - Overdue Tasks
-
-{
-    gui_destroy()
-    run "https://www.notion.so/bladestack/Overdue-Tasks-9a4df6efb21e426f8a9463368ed1e754"
-}
-
-else if BSIO = ntask ; Notion - Samuraitasuku
-
-{
-    gui_destroy()
-    run "https://www.notion.so/bladestack/Board-By-Status-0e25bb0b78164c90af47f6b72f08f619"
-}
-
-else if BSIO = nstand ; Notion - Daily Tachiagaru Standups
-
-{
-    gui_destroy()
-    run "https://www.notion.so/bladestack/0c13e42faa9e43819fc55a0944c7b709?v=d7902a4e463d4cb280902d4f0220e1d8"
-}
-
-else if BSIO = nkb ; Notion - Knowledge Blade
-
-{
-    gui_destroy()
-    run "https://www.notion.so/bladestack/cf667487fe9346358f5c1a14acf4f440?v=76431287eea34434bd2d829f91b59c94"
-}
-
-else if BSIO = nts ; Notion - Samuraitasuku Tablew view by Samurai
-
-{
-    gui_destroy()
-    run "https://www.notion.so/bladestack/Board-By-Samurai-b91d92546b73450da04d44c4dc9fd413"
-}
-
-
-
-else if BSIO = nadv ; Notion - Advisory
-
-
-{
-    gui_destroy()
-    run "https://www.notion.so/bladestack/49f7906990ae4808a7302becd3d5ba98?v=bfe63a0e8ed64548866f71c12e6e36c8"
-}
-
-else if BSIO = nsam ; Notion - Samurai Mananagement Meeting Minutes
-
-
-{
-    gui_destroy()
-    run "https://www.notion.so/bladestack/bba111fd01244da1b0c9b45ad4041123?v=155d7f30621040bbb5bcdb899c9f8def"
-}
-
-
-else if BSIO = tstack ; Notion - Samurai Mananagement Meeting Minutes
-
-
-{
-    gui_destroy()
-    run "https://www.notion.so/bladestack/Tools-Stack-201646485c97404e84fb4b1a838f0139"
-}
-
-
-;-------------------------------------------------------------------------------
-;;; BSIO - BOX - EXPLORER;;;
-;-------------------------------------------------------------------------------
-
-
-
-else if BSIO = boxs ; BSIO Box Sync Folder
-{
-    gui_destroy()
-    run, D:\Box Sync\Box Sync\
-}
-
-else if BSIO = broot ; BSIO Box Root
-{
-    gui_destroy()
-    run, D:\Box Sync\Box Sync\BLADESTACK.IO Root
-}
-
-;-------------------------------------------------------------------------------
-;;; BSIO - BOX.COM ;;;
-;-------------------------------------------------------------------------------
-
-else if BSIO = box-anom ; Anomali Advisory Box
-{
-    gui_destroy()
-    run "https://bladestackio.app.box.com/folder/153635172096"
-}
-
-else if BSIO = box-root ; Root Box
-{
-    gui_destroy()
-    run "https://bladestackio.app.box.com/folder/0"
-}
-
-else if BSIO = box-ant ; Anthology Box
-{
-    gui_destroy()
-    run "https://bladestackio.app.box.com/folder/176157435309"
-}
 
 
 
@@ -1100,7 +587,7 @@ else if BSIO = out ; open outlook
         ; Create and display the specified folder in Outlook
         Outlook := ComObjCreate("Outlook.Application")
         Namespace := Outlook.GetNamespace("MAPI")
-        Account := Namespace.Folders.Item("bjagasia@bladestack.io")
+        Account := Namespace.Folders.Item("REPLACE_ME_WITH_YOUR_EMAIL")
         Folder := Account.Folders.Item("Inbox")
         Folder.Display
     

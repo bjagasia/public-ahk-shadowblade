@@ -1,10 +1,10 @@
 [Paths]
 AppData=C:\Users\Admin
-Downloads=D:\bjagasia\Downloads
+Downloads=
 BoxSync=D:\Box Sync\Box Sync
 
 [UserInfo]
-Name=Bhanu Jagasia
-PhoneNumber=571.269.4272
-IntDialingCode=+15712694272
-AccountEmail=bjagasia@bladestack.io
+Name=Your Name
+PhoneNumber=123-456-7891
+IntDialingCode=+1234567891
+AccountEmail=youremail@email.com
