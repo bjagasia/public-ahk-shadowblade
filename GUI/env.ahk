@@ -31,11 +31,11 @@ steam2 = "C:\Program Files (x86)\Steam\bin\cef\cef.win7x64" ; steam web helper
 SystemDriveRoot = C: ; Root Drive Letter
 AppDataPathPrefeix = "" ; Path to your AppData
 ObsidianVaultID = "" ; Obsidian Vault ID
-AccountEmail = "" ; bladestack email 
-MyName = "" ; Name
-PhoneNumber = "" ; You number
+Email = "" ;  email 
+MyName = "Your Name" ; Name
+PhoneNumber = "Your Number" ; You number
 IntDialingCode = "" ; International Number in full
 DownloadsPath = "" ; Path to your Downloads
-BoxSyncPrefix= "" ; Path to your BoxSync
+CloudStoragePrefix= "" ; Path to your Local Cloud Storage
 JiraUserID = ""  ; This can be grabbed from the Jira URL
 
