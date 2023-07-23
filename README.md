@@ -88,4 +88,5 @@ Example:
 
 
 ### Most recent changes
+2023-07-23 - Commented out personal commands under GUI.ahk
 2023-03-07 - Added README.MD
